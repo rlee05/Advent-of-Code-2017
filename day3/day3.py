@@ -8,17 +8,17 @@ class Direction(Enum):
 def partOne():
     target = 277678
     i = 1
-    while ((i*i) < target):
+    while (i*i) < target:
         i += 2
     layer = (i-1)/2
     position = (target - (i-2)*(i-2))%(i-1)
     offset = abs(position - layer)
-    print(offset+layer)
+    print offset+layer
 
 def expandGrid(grid):
     side_length = len(grid)+2
     for row in grid:
-        row.insert(0,0)
+        row.insert(0, 0)
         row.append(0)
     grid.append([0 for i in xrange(side_length)])
     grid.insert(0, [0 for i in xrange(side_length)])

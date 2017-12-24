@@ -41,5 +41,4 @@ while not mem.didSeeConfig:
     mem.updateConfig()
     mem.checkIfSeen()
 
-print mem.count - mem.getCurCount()
-    
+print mem.count - mem.getCurCount()   

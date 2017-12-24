@@ -22,7 +22,7 @@ for dir in data:
 
 if (position[0] > 0 and position[2] > 0) or (position[0] < 0 and position[2] < 0):
     sign = abs(position[0])/position[0]
-    delta = min(abs(position[0]),abs(position[2]))*sign
+    delta = min(abs(position[0]), abs(position[2]))*sign
     position[1] += delta
     position[0] -= delta
     position[2] -= delta

@@ -28,11 +28,11 @@ def setup():
     return disc_dict
 
 def partOne(disc_dict):
-    # Assume all discs are part of one tree so start at a any disc
+    # Assume all discs are part of one tree so start at any disc
     cur = disc_dict.itervalues().next()
     while cur.parent != None:
         cur = disc_dict[cur.parent]
-    return cur.name   
+    return cur.name
 
 def makeStack(disc_dict, disc_name):
     stack = []
@@ -55,7 +55,7 @@ def getWeight(disc_dict, disc):
         for child in children:
             weight += getWeight(disc_dict, child)
     return weight
-    
+
 def partTwo(disc_dict, stack):
     while len(stack) > 0:
         layer = stack.pop()
@@ -70,7 +70,7 @@ def partTwo(disc_dict, stack):
             most_common = common_counter[0][0]
             index = weights.index(least_common)
             bad_disc = disc_dict[layer[index]]
-            return bad_disc.weight + most_common - least_common  
+            return bad_disc.weight + most_common - least_common
 
 disc_dict = setup()
 disc_name = partOne(disc_dict)

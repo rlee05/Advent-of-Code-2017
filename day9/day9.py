@@ -17,7 +17,7 @@ with open("day9.txt","r") as input:
                     score += val
                     stack.append("{")
                 elif line[i] == ",":
-                    if line[i+1] != "<" and line [i-1] != ">":
+                    if line[i+1] != "<" and line[i-1] != ">":
                         stack.append(",")
                 elif line[i] == "}":
                     if stack[-1] == "}":
@@ -28,11 +28,10 @@ with open("day9.txt","r") as input:
                     stack.pop()
                 elif line[i] == "!":
                     stack.append("!")
-                    
+
                 elif line[i] == ">":
                     groupMode = True
                 else:
                     num_garbage += 1
 print score
 print num_garbage
-#print "".join(stack)

@@ -21,7 +21,7 @@ def getIncrVal(incr, val):
 
 def partOne():
     reg_dict = dict()
-    with open("day8.txt","r") as input:
+    with open("day8.txt", "r") as input:
         for line in input:
             reg_a, sign, val, cond, reg_b, op, op_val = line.split()
             if reg_a not in reg_dict:
@@ -38,7 +38,7 @@ def partOne():
 def partTwo():
     reg_dict = dict()
     largest = 0
-    with open("day8.txt","r") as input:
+    with open("day8.txt", "r") as input:
         for line in input:
             reg_a, sign, val, cond, reg_b, op, op_val = line.split()
             if reg_a not in reg_dict:
